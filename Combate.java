@@ -191,7 +191,7 @@ public class Combate
         // TODO: si cantidad es 0, devuelve null.
         // TODO: sortea un número con random.nextInt(cantidad) y devuelve
         //       disponible1 si sale 0, disponible2 si sale 1 o disponible3 si sale 2.
-        
+        //hola
         return null;
     }
 
