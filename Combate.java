@@ -352,6 +352,7 @@ public class Combate
            Se deberá tener en cuenta si alguno/s de los 
            poderes del pokemon es vacío (nulo)
         */
+        System.out.println("Turno de " + pokemon.getNombre());
        if(pokemon.getPoder1() != null){
            System.out.println(pokemon.getPoder1().toString());
        }
