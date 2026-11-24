@@ -192,6 +192,51 @@ public class Combate
         // TODO: sortea un número con random.nextInt(cantidad) y devuelve
         //       disponible1 si sale 0, disponible2 si sale 1 o disponible3 si sale 2.
         //hola
+        Poder disponible1 = null;
+        Poder disponible2 = null;
+        Poder disponible3 = null;
+        int cantidad = 0;
+        if (puedeUsar(pokemon,pokemon.getPoder1())) {
+            disponible1 = pokemon.getPoder1();
+            cantidad++;
+        }
+        
+        if (puedeUsar(pokemon,pokemon.getPoder2())) {
+            if (disponible1 == null) {
+                disponible1 = pokemon.getPoder2();
+            }
+            else {
+                disponible2 = pokemon.getPoder2();
+            }
+            cantidad++;
+        }
+        
+        if(puedeUsar(pokemon, pokemon.getPoder3())){
+            if(disponible1 == null){
+                disponible1 = pokemon.getPoder3();
+            }
+            else if(disponible2 == null){
+                disponible2 = pokemon.getPoder3();
+            }
+            else{
+                disponible3 = pokemon.getPoder3();
+            }
+            cantidad++;
+        }
+        
+        if(cantidad == 0){
+            return null;
+        }
+        
+        switch (random.nextInt(cantidad)){
+            case 0:
+                return disponible1;
+            case 1:
+                return disponible2;                
+            case 2:
+                return disponible3;
+
+        }
         return null;
     }
 
@@ -257,6 +302,17 @@ public class Combate
         // TODO: si el defensor está debilitado, muestra que se ha quedado sin vida
         //       y guarda al atacante como ganador.
         // TODO: llama a esperarIntro y después a cambiarTurno.
+        Pokemon ataque = getPokemonConTurno();
+        Pokemon defensor = getPokemonSinTurno();
+        System.out.println("Turno de " + ataque.getNombre());
+        atacar(ataque, defensor);
+        mostrarEstado();        
+        if(defensor.estaDebilitado()){
+            System.out.println("Se ha quedado sin vida " + defensor.getNombre());
+            this.ganador = ataque;
+        }
+        esperarIntro();
+        cambiarTurno();
     }
 
     /**
@@ -296,6 +352,16 @@ public class Combate
            Se deberá tener en cuenta si alguno/s de los 
            poderes del pokemon es vacío (nulo)
         */
+       if(pokemon.getPoder1() != null){
+           System.out.println(pokemon.getPoder1().toString());
+       }
        
+       if(pokemon.getPoder2() != null){
+           System.out.println(pokemon.getPoder2().toString());
+       }
+       
+       if(pokemon.getPoder3() != null){
+           System.out.println(pokemon.getPoder3().toString());
+       }
     }
 }

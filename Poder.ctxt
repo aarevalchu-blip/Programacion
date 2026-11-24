@@ -1,5 +1,5 @@
 #BlueJ class context
-#Mon Nov 23 20:40:16 CET 2026
+#Tue Nov 24 15:42:39 CET 2026
 comment0.target=Poder
 comment0.text=\r\n Clase Poder\: un ataque que puede usar un pokemon. Usarlo cuesta energ\u00EDa.\r\n\r\n @author (your name)\r\n @version (a version number or a date)\r\n
 comment1.params=nombre tipo potencia energiaConsumida

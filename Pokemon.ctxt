@@ -1,5 +1,5 @@
 #BlueJ class context
-#Mon Nov 23 20:40:16 CET 2026
+#Tue Nov 24 15:57:50 CET 2026
 comment0.target=Pokemon
 comment0.text=\r\n Clase Pokemon\: un pokemon con su tipo, vida, energ\u00EDa y tres poderes.\r\n\r\n @author (your name)\r\n @version (a version number or a date)\r\n
 comment1.params=nombre tipo vida energia

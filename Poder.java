@@ -82,9 +82,9 @@ public class Poder
     
     public String toString(){
         // TODO: Devuelve una cadena, ver muestra del enunciado.
-        return "***" + this.nombre + "***" +
+        return "***" + this.nombre + "***\n" +
         "Tipo: " + this.tipo + "\n" +
-        "Potencia: " + this.energiaConsumida + "\n";
-        
+        "Potencia: " + this.potencia + "\n" +
+        "Energia: " + this.energiaConsumida + "\n";
     }
 }
